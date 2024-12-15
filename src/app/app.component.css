@@ -1,0 +1,83 @@
+.no_results_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.images {
+    width: 300px;
+}
+.plus-icon {
+    font-size: 25px;
+    color: white;
+}
+/* .icon_box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1DA1F2;
+    text-align: center;
+    align-content: center;
+    background-color: #1DA1F2;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    @media (min-width: 1200px) {
+        bottom: 10%;
+    }
+    @media (min-width: 551px) and (max-width: 1000px) {
+        bottom: 50%;
+    }
+    @media (min-width: 375px) and (max-width: 550px) {
+        bottom: 30%;
+    }
+} */
+.employee_list {
+    height: 500px;
+}
+.list_item {
+    display: flex;
+    border-bottom: 2px solid #f1eded;
+    transition: transform 0.3s ease;
+}
+.delete {
+    background-color: red; transform: translateY(-50%);
+    position: absolute;
+    right: -100px;
+    top: 49%;
+    width: 105px;
+    height: 119px;
+}
+.delete-icon {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.content.swiped {
+    transform: translateX(-100px);
+}
+.edit-icon {
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+  .icon_box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1DA1F2;
+    text-align: center;
+    align-content: center;
+    background-color: #1DA1F2;
+    cursor: pointer;
+    position: relative;
+    right: 5%;
+    float: inline-end;
+  }
+  .footer {
+    color: grey;
+  }
+

@@ -1,0 +1,126 @@
+.input-icons {
+    width: 60%;
+    margin: auto;
+    height: 480px;
+}
+
+.input-icons i {
+    position: absolute;
+    margin-top: 8px;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 40px;
+    color: #1DA1F2;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+    text-indent: 30px;
+}
+.role {
+    width: 100%;
+    background-color: white;
+    color: grey;
+}
+.date-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer {
+    position: relative;
+    float: inline-end;
+    right: 5%;
+  }
+  .cancel-btn {
+    margin-right: 20px;
+  }
+  .role_list {
+    height: 50px;
+  }
+  .role_list:hover {
+    background-color: #1DA1F2;
+  }
+  .dropdown {
+    margin-bottom: 30px;
+  }
+  .dropdown-toggle {
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .dropdown-menu {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin-top: -5px;
+  }
+  .dropdown-item {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  .role_icon {
+    margin-top: 12px !important;
+  }
+  .arrow-right {
+    color: #1DA1F2;
+    font-size: 20px;
+    @media (min-width: 2000px) {
+      margin-left: 60px;
+    }    
+    @media (min-width: 1350px) and (max-width: 1999px) {
+      margin-left: 60px;
+    } 
+    @media (min-width: 1200px) and (max-width: 1500px) {
+      margin-left: 50px;
+    }  
+    @media (min-width: 767px) and (max-width: 1199px) {
+      margin-left: 40px;
+    }  
+
+}
+.datepicker2 {
+  @media (max-width: 766px) {
+    margin-top: 70px;
+  } 
+}
+.datepicker_width {
+    display: grid;
+    /* @media (min-width: 1441px) {
+       width: 37%; 
+    }
+    @media (min-width: 1302px) and (max-width: 1440px){
+        width: 35%; 
+     }
+     @media (min-width: 1200px) and (max-width: 1301px) {
+        width: 34%; 
+     }
+     @media (max-width: 751px) {
+        width: 100%; 
+     } */
+}
+.cancel_datepicker {
+  color: #1DA1F2 !important;
+  background-color: #d8ebf7;
+}
+.save_datepicker {
+  color: white !important;
+  background-color: #1DA1F2;
+}
+::ng-deep .mat-datepicker-content .mat-calendar {
+    width: 400px !important;
+}
+.delete_icon {
+  color: white;
+}
+
+
+

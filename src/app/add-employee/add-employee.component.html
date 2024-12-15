@@ -1,0 +1,68 @@
+<div class="main_heading">
+    <h1 *ngIf="editID === undefined" class="heading">Add Employee</h1>
+    <h1 *ngIf="editID !== undefined" class="heading">Edit Employee</h1>
+</div>
+<div class="input-icons mt-5">
+    <span><i class="fa fa-user icon"></i></span>
+    <input class="form-control input-field" type="text" placeholder="Employee name" [(ngModel)]="employeeName">
+    <div class="dropdown">  
+      <span><i class="fa fa-briefcase icon role_icon"></i></span>
+      <div class="dropdown-toggle form-control input-field" (click)="toggleDropdown()">
+        {{ selectedRole }}
+      </div>
+    
+      <ul *ngIf="isDropdownOpen" class="dropdown-menu show">
+        <li (click)="selectItem('Product Designer')">
+          <a class="dropdown-item">Product Designer</a>
+        </li>
+        <li (click)="selectItem('Flutter Developer')">
+          <a class="dropdown-item">Flutter Developer</a>
+        </li>
+        <li (click)="selectItem('QA Tester')">
+          <a class="dropdown-item">QA Tester</a>
+        </li>
+        <li (click)="selectItem('Product Owner')">
+          <a class="dropdown-item">Product Owner</a>
+        </li>
+      </ul>
+    </div>
+    <div class="datepicker-container">
+      <div class="row">
+        <div class="col-md-5">
+          <mat-form-field appearance="outline" class="datepicker_width">
+            <input matInput  [matDatepicker]="picker1" placeholder="No date" [(ngModel)]="selectedDate1">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 [calendarHeaderComponent]="header">
+              <mat-datepicker-actions>
+                <button mat-button matDatepickerCancel class="cancel_datepicker">Cancel</button>
+                <button mat-button matDatepickerApply class="save_datepicker">Save</button>
+              </mat-datepicker-actions>
+            </mat-datepicker>
+          </mat-form-field>
+        </div>
+       <div class="col-md-2" *ngIf="!this.isMobileView">
+        <span class="arrow-right"><i class="fa fa-arrow-right"></i></span>
+       </div>
+       <div class="col-md-2" *ngIf="this.isMobileView">
+        <span class="arrow-right"><i class="fa fa-arrow-down"></i></span>
+       </div>
+      <div class="col-md-5">
+        <mat-form-field appearance="outline" class="datepicker_width datepicker2">
+          <input matInput [matDatepicker]="picker2" placeholder="No date" [(ngModel)]="selectedDate2">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2 [calendarHeaderComponent]="header">
+            <mat-datepicker-actions>
+              <button mat-button matDatepickerCancel class="cancel_datepicker">Cancel</button>
+              <button mat-button matDatepickerApply class="save_datepicker">Save</button>
+            </mat-datepicker-actions>
+          </mat-datepicker>
+        </mat-form-field>
+      </div>
+     </div>
+    </div>
+</div>
+<div class="footer">
+  <button type="button" class="btn btn-outline-primary cancel-btn" (click)="cancel()">Cancel</button>
+  <button type="button" class="btn btn-primary" (click)="updateData()" *ngIf="editID !== undefined">Update</button>
+  <button type="button" class="btn btn-primary" (click)="addData()" *ngIf="editID === undefined">Save</button>
+</div>
